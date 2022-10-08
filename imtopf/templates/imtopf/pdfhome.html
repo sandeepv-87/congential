@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>JDF - Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'imtopf/css/pdfstyle.css' %}">
+<link rel="stylesheet" href="{% static 'imtopf/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'imtopf/css/style.css' %}">
+<link href="{% static 'imtopf/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+<link href="{% static 'imtopf/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("{% static 'imtopf/img/pdfhero.jpg' %}");
+  opacity:1;
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="header sticky-top bg-white">
+  <nav class="navbar navbar-expand-md navbar-light">
+    <img style="width:130px;height:80px;" src="{% static 'imtopf/img/pdflogo.png' %}">
+    <div class="collapse navbar-collapse justify-content-end" id="my-navbar">
+      <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link text-dark" href="{% url 'signup' %}">
+                  <i class="fa fa-user"></i>Signup
+              </a>
+          </li>
+          <div class="nav-vl"></div>
+          <li class="nav-item">
+              <a class="nav-link text-dark" href="{% url 'login' %}">
+                  <i class="fa fa-sign-in"></i>Login
+              </a>
+          </li>
+      </ul>
+    </div>
+</nav>
+</div>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small" style="color:black;">Introducing JDF</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Introducing JDF</span><br>
+    <span class="w3-large text-dark">A tool which provides you with maximum convenience by converting any image you wish into PDF in no time</span>
+    
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+ <!-- ======= App Features Section ======= -->
+ <section id="features" class="features">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Tool Features</h2>
+      <p>Be it any tool you are working with today, let everything be easy to store and reuse. Introducing a tool which easily converts any image (i.e) JPG, PNG, JPEG, etc into PDF!!</p>
+    </div>
+
+    <div class="row no-gutters">
+      <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-1">
+        <div class="content d-flex flex-column justify-content-center">
+          <div class="row">
+            <div class="col-md-6 icon-box">
+              <i class="bx bx-receipt"></i>
+              <h4>Hassle free conversion</h4>
+              <p>enables you to convert any image into pdf easily</p>
+            </div>
+            <div class="col-md-6 icon-box">
+              <i class="bx bx-images"></i>
+              <h4>Review and Reuse</h4>
+              <p>Your previous works is safely available in our dashboard whenever you need</p>
+            </div>
+            <div class="col-md-6 icon-box">
+              <i class="bi bi-translate"></i>
+              <h4>Easy Translation</h4>
+              <p>Our service is available in any language you desire</p>
+            </div>
+            <div class="col-md-6 icon-box">
+              <i class="bx bx-atom"></i>
+              <h4>All platforms supported</h4>
+              <p>Accessible and usable in any kind of Operating Systems (i.e) Linux, Windows, Mac</p>
+            </div>
+            <div class="col-md-6 icon-box">
+              <i class="bi bi-shield-lock"></i>
+              <h4>File protection guaranteed</h4>
+              <p>Your files are safe with us for you to access anytime and anywhere since we are using SSL encryption</p>
+            </div>
+            <div class="col-md-6 icon-box">
+              <i class="bi bi-cart-plus-fill"></i>
+              <h4>Add several images into single PDF</h4>
+              <p>After the initial file upload, we enable you to add multiple image files into one PDF</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2">
+        <img src="img/pdffeatures.png" class="img-fluid" alt="">
+      </div>
+    </div>
+    <footer id="footer" style="color:white;">
+      <div class="footer-top bg-dark">
+        <div class="container">
+          <div class="row">
+  
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>JDF - Online PDF Tool</h3>
+              <p>
+                R.M.K Group Of Institutions <br>
+                <strong>Email:</strong> kiruthiga.kameswaran@gmail.com<br>
+                prithikang3108@gmail.com<br>
+                ssathyan1212@gmail.com<br>
+                vsandeepvvr@gmail.com<br>
+                bindhumadavavarma@gmail.com<br>
+              </p>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">JPG to PDF</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">PNG to PDF</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">JPEG to PDF</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Translate</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Store and Reuse</a></li>
+              </ul>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+      <div class="container py-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>JDF</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

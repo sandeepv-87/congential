@@ -1,4 +1,4 @@
-asgiref==3.5.2
+asgiref==3.2.10
 azure-core==1.25.1
 azure-storage-blob==12.13.1
 certifi==2022.9.24

@@ -23,10 +23,9 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="d-flex">
-            <button class="btn btn-primary mx-2" type="submit">Signup</button>
-            <button class="btn btn-success" type="submit">Login</button>
+            {% block show_signup %}{% endblock %}
+            {% block show_login %}{% endblock %}
         </div>
     </div>
 </nav>

@@ -1,4 +1,11 @@
 asgiref==3.5.2
+deprecation==2.1.0
 Django==4.1.1
+django-storages==1.13.1
+img2pdf==0.4.4
+lxml==4.9.1
+packaging==21.3
+pikepdf==6.0.2
 Pillow==9.2.0
+pyparsing==3.0.9
 sqlparse==0.4.3

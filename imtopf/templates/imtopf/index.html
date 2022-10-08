@@ -1,4 +1,10 @@
 {% extends 'imtopf/base.html' %}
+{% block show_login %}
+    <a href="{% url 'login' %}" class="btn btn-success" type="submit">Login</a>
+{% endblock %}
+{% block show_signup %}
+    <a href="{% url 'signup' %}" class="btn btn-primary mx-2" type="submit">Signup</a>
+{% endblock %}
 {% block content %}
     <div class="container">
         <style>
@@ -40,7 +46,7 @@
                                  class="mb-4" height="140">
                         </header>
                         <p>
-                        <form method="post" action="/">
+                        <form method="post" enctype="multipart/form-data">
                             {% csrf_token %}
                             <input name="image" class="form-control form-control-lg form-file-button-color-warning"
                                    id="formFileLg"
@@ -53,9 +59,6 @@
                 </div>
             </section>
         </main>
-        <br>
-        <br>
-        <br>
         <br>
         <br>
         <br>

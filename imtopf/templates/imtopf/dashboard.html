@@ -1,0 +1,49 @@
+{% extends 'imtopf/base.html' %}
+{% block content %}
+    {% if pdfs %}
+            <div class="container my-5">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">File</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Pdf</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for pdf in pdfs %}
+                        <tr>
+                            <th scope="row">{{ pdf.image_name }}</th>
+                            <td><a href="{{ pdf.user_image.url }}" class="btn btn-warning">view</a>
+                            </td>
+                            <td><a href="{{ pdf.user_pdf.url }}" class="btn btn-primary">download</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+    {% else %}
+        <h1 class="text-center"> Oops no records to show try converting some</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    {% endif %}
+{% endblock %}

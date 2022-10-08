@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-o34jz3nsf5xxcq0v*en&&qr%m_5b=m@+mg@iar(^+h1x%vl4-#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://jdf.azurewebsites.net/','*']
+ALLOWED_HOSTS = ['https://jdf.azurewebsites.net/', '*']
 
 # Application definition
 
@@ -72,13 +72,25 @@ WSGI_APPLICATION = 'congential.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+try:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'd9v6971pa1fl12',
+            'USER': 'nyekiuaatkejvt',
+            'PASSWORD': 'c853e10472d22f3da02f6efca5d0b9b1cc10e1fd4d407b6ec8d8b31439adfa91',
+            'HOST': 'ec2-44-207-126-176.compute-1.amazonaws.com',
+            'PORT': 5432,
+            'OPTIONS': {'sslmode': 'require'}
+        }
     }
-}
+except:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -119,7 +131,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'imtopf/static')
 ]
-
 
 CSRF_TRUSTED_ORIGINS = ['https://jdf.azurewebsites.net/']
 

@@ -1,0 +1,65 @@
+{% extends 'imtopf/base.html' %}
+{% block content %}
+    <div class="container">
+        <style>
+
+            body {
+                background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                background-size: 400% 400%;
+                animation: gradient 15s ease infinite;
+            / / height: 100 vh;
+            }
+
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        </style>
+        <main>
+            <section class="py-5 mt-5 text-center container bg-light">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-light " style="font-family: sans-serif"><p>Image to PDF</p></h1>
+                        <p class="lead text-strong">Convert each Image into a PDF page make all the images into PDF.</p>
+                        <header>
+                            <img src="https://cdn-icons-png.flaticon.com/512/1160/1160307.png" alt="" width="150"
+                                 class="mb-4">
+                            <img class="mx-5"
+                                 src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" alt=""
+                                 width="70"
+                                 class="mb-4" height="70">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/PDF_icon.svg/1200px-PDF_icon.svg.png"
+                                 alt="" width="150"
+                                 class="mb-4" height="140">
+                        </header>
+                        <p>
+                        <form method="post" action="/">
+                            {% csrf_token %}
+                            <input name="image" class="form-control form-control-lg form-file-button-color-warning"
+                                   id="formFileLg"
+                                   type="file">
+                            <button type="submit" class="btn btn-warning btn-lg mt-5">Convert</button>
+                        </form>
+
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+{% endblock %}

@@ -1,10 +1,5 @@
 {% extends 'imtopf/base.html' %}
-{% block show_login %}
-    <a href="{% url 'login' %}" class="btn btn-success" type="submit">Login</a>
-{% endblock %}
-{% block show_signup %}
-    <a href="{% url 'signup' %}" class="btn btn-primary mx-2" type="submit">Signup</a>
-{% endblock %}
+
 {% block content %}
     <div class="container">
         <style>
@@ -37,10 +32,7 @@
                         <header>
                             <img src="https://cdn-icons-png.flaticon.com/512/1160/1160307.png" alt="" width="150"
                                  class="mb-4">
-                            <img class="mx-5"
-                                 src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" alt=""
-                                 width="70"
-                                 class="mb-4" height="70">
+                            <img src="https://img.icons8.com/fluency/96/000000/arrow.png" class="mx-5">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/PDF_icon.svg/1200px-PDF_icon.svg.png"
                                  alt="" width="150"
                                  class="mb-4" height="140">
@@ -48,13 +40,33 @@
                         <p>
                         <form method="post" enctype="multipart/form-data">
                             {% csrf_token %}
-                            <input name="image" class="form-control form-control-lg form-file-button-color-warning"
-                                   id="formFileLg"
-                                   type="file">
+                            <input name="image" class="form-control" type="file" id="formFileMultiple" multiple>
                             <button type="submit" class="btn btn-warning btn-lg mt-5">Convert</button>
                         </form>
-
                         </p>
+                        {% if pdfs %}
+                            <div class="container">
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">File</th>
+                                        <th scope="col">Image</th>
+                                        <th scope="col">Pdf</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for pdf in pdfs %}
+                                        <tr>
+                                            <th scope="row">{{ pdf.image_name }}</th>
+                                            <td><a href="{{ pdf.user_image.url }}" target="_blank" class="btn btn-warning">view</a>
+                                            </td>
+                                                <td><a href="{{ pdf.user_pdf.url }}" target="_blank" class="btn btn-primary">download</a></td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </section>

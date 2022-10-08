@@ -54,8 +54,7 @@ ROOT_URLCONF = 'congential.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,8 +114,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
-AZURE_CONNECTION_STRING = os.environ.get('AZURE_CONNECTION_STRING')
-AZURE_CONTAINER = os.environ.get('AZURE_CONTAINER')
+AZURE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=warehouse;AccountKey=73VUQdUw3OlR3DGFcgKck0FoBq8jljGBsIVr8ubNE9SLU6L404WYZF7paQb8ohmeZCLGO/tce/Z9+AStBz3Qmw==;EndpointSuffix=core.windows.net"
+AZURE_CONTAINER = "storeroom"
+MEDIA_URL = f"http://warehouse.blob.core.windows.net/storeroom/"
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # Default primary key field type

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-o34jz3nsf5xxcq0v*en&&qr%m_5b=m@+mg@iar(^+h1x%vl4-#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://jdf.azurewebsites.net/','*']
 
 # Application definition
 
@@ -112,6 +112,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+CSRF_TRUSTED_ORIGINS = ['https://jdf.azurewebsites.net/']
 
 DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 AZURE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=warehouse;AccountKey=73VUQdUw3OlR3DGFcgKck0FoBq8jljGBsIVr8ubNE9SLU6L404WYZF7paQb8ohmeZCLGO/tce/Z9+AStBz3Qmw==;EndpointSuffix=core.windows.net"
